@@ -11,7 +11,11 @@ import SwiftUI
 struct DessertApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView(
+                viewModel: .init(
+                    apiService: APIClient()
+                )
+            )
         }
     }
 }
